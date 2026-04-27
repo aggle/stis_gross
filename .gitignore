@@ -3,3 +3,8 @@
 /src/__pycache__/
 /src/.ipynb_checkpoints/
 /example_notebooks/.ipynb_checkpoints/
+/src/stis_gross.egg-info/
+/src/gross/__pycache__/
+.ipynb_checkpoints/
+dev/.ipynb_checkpoints/
+*.fits
