@@ -20,7 +20,7 @@ from coronspec_tools import find_star as ctfs
 # the WCS throws an warning when loading this data that we can ignore
 warnings.filterwarnings("ignore", category=FITSFixedWarning)
 
-class StarVisit:
+class Observation:
 
     def __init__(
             self,
@@ -62,8 +62,8 @@ class StarVisit:
         """
         self._files = {'sx1': sx1_file, 'unocc': unocc_file, 'occ': occ_file}
         self.hdrs = {
-            k: {h: fits.getheader(v, h) for h in [0,'sci']}
-            for k, v in self._files.items()
+            k: {h: fits.getheader(f, h) for h in [0,'sci']}
+            for k, f in self._files.items()
         }
         # pull data out of the files
         # spectral information
@@ -74,23 +74,23 @@ class StarVisit:
         self.process_occulted(occ_file)
 
         # process data
-        self.occ_primary_row, self.occ_bar = ctfs.find_star_from_wcs(
+        self.occ_row, self.occ_bar = ctfs.find_star_from_wcs(
             sx1_file, unocc_file, occ_file,
         )
         # if str(occ_file)[:-5].split("_")[-1] == 'sx2':
-        #     self.occ_primary_row -= 88.5
+        #     self.occ_row -= 88.5
         self.occ_sep = self.occ_wcs.pixel_to_world(
-            0, self.occ_primary_row
+            0, self.occ_row
         )[1]
         self.make_occ_stamp(occ_stamp_width)
         # data cleaning
         if median_clean > 0:
-            specunit = self.primary_spectrum_counts.unit
-            self.primary_spectrum_counts = ctutils.rolling_median(
-                self.primary_spectrum_counts.value, median_clean
+            specunit = self.primary_spectrum.unit
+            self.primary_spectrum = ctutils.rolling_median(
+                self.primary_spectrum.value, median_clean
             ) * specunit
-            self.primary_spectrum_counts_unc = ctutils.rolling_median(
-                self.primary_spectrum__counts_unc.value, median_clean
+            self.primary_spectrum_unc = ctutils.rolling_median(
+                self.primary_spectrum_unc.value, median_clean
             ) * specunit
             self.occ_stamp.data = self.clean_stamp(self.occ_stamp.data, median_clean)
             self.occ_stamp_unc.data = self.clean_stamp(self.occ_stamp_unc.data, median_clean)
@@ -105,26 +105,26 @@ class StarVisit:
         # make the occulted stamp and record the center row
         self.occ_stamp = Cutout2D(
             self.occ_img, 
-            position=(self.occ_img.shape[1]/2, self.occ_primary_row),
+            position=(self.occ_img.shape[1]/2, self.occ_row),
             size=(width, self.occ_img.shape[1]),
             wcs=self.occ_wcs,
             copy=True,
         )
         self.occ_stamp_unc = Cutout2D(
                     self.occ_unc, 
-                    position=(self.occ_unc.shape[1]/2, self.occ_primary_row),
+                    position=(self.occ_unc.shape[1]/2, self.occ_row),
                     size=(width, self.occ_unc.shape[1]),
                     wcs=self.occ_wcs,
                     copy=True,
                 )
         self.occ_stamp_dq = Cutout2D(
                     self.occ_dq, 
-                    position=(self.occ_dq.shape[1]/2, self.occ_primary_row),
+                    position=(self.occ_dq.shape[1]/2, self.occ_row),
                     size=(width, self.occ_dq.shape[1]),
                     wcs=self.occ_wcs,
                     copy=True,
                 )
-        self.occ_stamp_center = self.occ_primary_row - self.occ_stamp.origin_original[1]
+        self.occ_stamp_center = self.occ_row - self.occ_stamp.origin_original[1]
 
 
     def process_specfile(self, specfile):
@@ -144,7 +144,7 @@ class StarVisit:
             colunit = hdulist[1].header[f'TUNIT{colind}']
             if 'Counts' in colunit:
                 colunit = colunit.replace("Counts",'count')
-            self.primary_spectrum_counts = units.Quantity(
+            self.primary_spectrum = units.Quantity(
                 np.squeeze(table[colname]),
                 unit=colunit
             )
@@ -153,7 +153,7 @@ class StarVisit:
             colunit = hdulist[1].header[f'TUNIT{colind}']
             if 'Counts' in colunit:
                 colunit = colunit.replace("Counts",'count')
-            self.primary_spectrum_counts_unc = units.Quantity(
+            self.primary_spectrum_unc = units.Quantity(
                 np.squeeze(table[colname]),
                 unit=colunit
             )
@@ -175,10 +175,10 @@ class StarVisit:
                 np.squeeze(table[colname]),
                 unit=colunit
             )
-            self.spectral_response_function = self.primary_spectrum_flux / self.primary_spectrum_counts
+            self.spectral_response_function = self.primary_spectrum_flux / self.primary_spectrum
             self.spectral_response_function_unc = self.spectral_response_function * np.sqrt(
                 (self.primary_spectrum_flux_unc/self.primary_spectrum_flux)**2 +\
-                (self.primary_spectrum_counts_unc/self.primary_spectrum_counts)**2
+                (self.primary_spectrum_unc/self.primary_spectrum)**2
             )
         return
 
@@ -192,7 +192,13 @@ class StarVisit:
             self.unocc_img = hdulist['SCI'].data.copy()
             self.unocc_unc = hdulist['ERR'].data.copy()
             filetype = str(unocc_file)[:-5].split("_")[-1]
-            self.offset, self.unocc_primary_row = ctfs.find_unocc_pos(hdulist, self.wlsol)
+            # if filetype == 'sx2': # crop the sx2 exposures
+            #     self.unocc_img = crop_sx2(self.unocc_img, self.wlsol.size)
+            #     self.unocc_unc = crop_sx2(self.unocc_unc, self.wlsol.size)
+            self.offset, self.unocc_row = ctfs.find_unocc_pos(hdulist, self.wlsol)
+            # if filetype == 'sx2':
+            #     self.unocc_row -= 88.5
+            #     print(self.unocc_row)
         self.unocc_trace = self.get_unocc_trace(trace_width)
         return
 
@@ -206,6 +212,10 @@ class StarVisit:
             self.occ_unc = hdulist['ERR'].data.copy()
             self.occ_dq = hdulist['DQ'].data.copy()
             filetype = str(occ_file)[:-5].split("_")[-1]
+            # if filetype == 'sx2': # crop the sx2 exposures
+            #     self.occ_img = crop_sx2(self.occ_img, self.wlsol.size)
+            #     self.occ_unc = crop_sx2(self.occ_unc, self.wlsol.size)
+            #     self.occ_dq = crop_sx2(self.occ_dq, self.wlsol.size)
             return
 
     def clean_stamp(self, img, width=10, std_thresh=100):
@@ -226,7 +236,7 @@ class StarVisit:
     def get_unocc_trace(self, trace_width):
         trace = Cutout2D(
             self.unocc_img, 
-            position=(self.unocc_img.shape[1]/2, self.unocc_primary_row),
+            position=(self.unocc_img.shape[1]/2, self.unocc_row),
             size=(trace_width, self.unocc_img.shape[1]),
             wcs=self.unocc_wcs,
             copy=True,
@@ -235,7 +245,7 @@ class StarVisit:
 
     def convert_to_contrast(self) -> None:
         """Converts all relevant data to units of contrast"""
-        spectrum = self.primary_spectrum_counts.value # counts/sec
+        spectrum = self.primary_spectrum.value # counts/sec
         # first, convert to counts/sec
         exptime = self.hdrs['unocc']['sci']['exptime']
         # spectrum = self.unocc_trace.data.sum(axis=0) / exptime
@@ -248,19 +258,29 @@ class StarVisit:
 
         return
 
-   def contrast_counts2flux(self, signal):
+    def contrast_counts2flux(self, signal):
         """Convert a row of signal from contrast units to flux"""
         return signal * self.spectral_response_function
 
     def get_bar_bounds(self) -> tuple[float, float]:
         halfwidth = (0.25*units.arcsec).to(units.deg)
         lb = self.occ_wcs.world_to_pixel(
-            self.occ_wcs.pixel_to_world(0, self.occ_primary_row)[0],
+            self.occ_wcs.pixel_to_world(0, self.occ_row)[0],
             self.occ_wcs.pixel_to_world(0, self.occ_bar)[1] - halfwidth
         )[1]
         ub = self.occ_wcs.world_to_pixel(
-            self.occ_wcs.pixel_to_world(0, self.occ_primary_row)[0],
+            self.occ_wcs.pixel_to_world(0, self.occ_row)[0],
             self.occ_wcs.pixel_to_world(0, self.occ_bar)[1] + halfwidth 
         )[1]
         return lb, ub
 
+def crop_sx2(img : np.ndarray, nwl : int) -> np.ndarray:
+    """If a padded SX2 image, do some rough cropping to force it to 1024x1024"""
+    nanimg = img.copy()
+    nanimg[nanimg == 0] = np.nan
+    row, col = np.where(~np.isnan(nanimg))
+    # use the bottom right corner
+    lr = (row.min(), col.max())
+    cimg = nanimg[lr[0]:lr[0]+nwl, lr[1]-nwl:lr[1]].copy()
+    cimg[np.isnan(cimg)] = 0
+    return cimg 
