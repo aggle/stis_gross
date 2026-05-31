@@ -1,0 +1,152 @@
+
+*** CALSTIS-0 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:58 EST
+
+Input    of0i03030_raw.fits
+Outroot  /Users/jaguilar/Projects/Research/hst17092-stis_coron/coronspec_tools/example_notebooks/fringe_flat_correction/output/of0i03030_raw.fits
+Warning  WAVECAL was specified, but WAVECORR is not PERFORM.
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:58 EST
+Input    of0i03030_raw.fits
+Output   /Users/jaguilar/Projects/Research/hst17092-stis_coron/coronspec_tools/example_notebooks/fringe_flat_correction/output/of0i03030_blv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2F1
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:29:58 EST
+Epcfile  of0i03pcj_epc.fits
+Warning  EPCTAB `of0i03pcj_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1543.97.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASFILE oref$84m17296o_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 01/04/2024
+BIASFILE DESCRIP =Refbias (4/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+Imset 1  End 13:29:58 EST
+
+Imset 2  Begin 13:29:58 EST
+Epcfile  of0i03pdj_epc.fits
+Warning  EPCTAB `of0i03pdj_epc.fits' not found.
+
+DQICORR  PERFORM
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1543.04.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+Imset 2  End 13:29:58 EST
+
+End      17-Dec-2025 13:29:58 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-2 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:58 EST
+Input    /Users/jaguilar/Projects/Research/hst17092-stis_coron/coronspec_tools/example_notebooks/fringe_flat_correction/output/of0i03030_blv_tmp.fits
+Output   /Users/jaguilar/Projects/Research/hst17092-stis_coron/coronspec_tools/example_notebooks/fringe_flat_correction/output/of0i03030_crj_tmp.fits
+
+CRCORR   PERFORM
+Total number of input image sets = 2
+CRREJTAB oref$j3m1403io_crr.fits
+CRCORR   COMPLETE
+
+End      17-Dec-2025 13:29:58 EST
+
+*** CALSTIS-2 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:58 EST
+Input    /Users/jaguilar/Projects/Research/hst17092-stis_coron/coronspec_tools/example_notebooks/fringe_flat_correction/output/of0i03030_crj_tmp.fits
+Output   /Users/jaguilar/Projects/Research/hst17092-stis_coron/coronspec_tools/example_notebooks/fringe_flat_correction/output/of0i03030_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2F1
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:29:58 EST
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:29:58 EST
+
+End      17-Dec-2025 13:29:58 EST
+
+*** CALSTIS-1 complete ***
+
+End      17-Dec-2025 13:29:58 EST
+
+*** CALSTIS-0 complete ***

@@ -1,0 +1,3906 @@
+
+*** CALSTIS-0 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:32 EST
+
+Input    of0i03010_raw.fits
+Outroot  output/of0i03010_raw.fits
+Wavecal  of0i03010_wav.fits
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:33 EST
+Input    of0i03010_raw.fits
+Output   output/of0i03010_blv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:33 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.31.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASFILE oref$84m1728io_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 25/03/2024
+BIASFILE DESCRIP =Refbias (1/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+Imset 1  End 13:26:33 EST
+
+Imset 2  Begin 13:26:33 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  PERFORM
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.4.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+Imset 2  End 13:26:33 EST
+
+End      17-Dec-2025 13:26:33 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-2 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:33 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_crj_tmp.fits
+
+CRCORR   PERFORM
+Total number of input image sets = 2
+CRREJTAB oref$j3m1403io_crr.fits
+CRCORR   COMPLETE
+
+End      17-Dec-2025 13:26:33 EST
+
+*** CALSTIS-2 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:33 EST
+Input    output/of0i03010_crj_tmp.fits
+Output   output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:33 EST
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:26:34 EST
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:34 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:34 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:26:34 EST
+
+Imset 2  Begin 13:26:34 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 2  End 13:26:34 EST
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:34 EST
+Input    of0i03010_wav.fits
+Output   output/of0i03010_fwv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:34 EST
+Epcfile  of0i03ozj_epc.fits
+Warning  EPCTAB `of0i03ozj_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1541.91.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASFILE oref$84m17296o_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 01/04/2024
+BIASFILE DESCRIP =Refbias (4/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:26:34 EST
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:34 EST
+Input    output/of0i03010_fwv_tmp.fits
+Output   output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:26:34 EST
+
+Order 1  Begin 13:26:34 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:26:34 EST
+Imset 1  End 13:26:34 EST
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-4 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:34 EST
+Input    output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:34 EST
+
+WAVECORR PERFORM
+WCPTAB   oref$16j1600co_wcp.fits
+WCPTAB   PEDIGREE=GROUND
+WCPTAB   DESCRIP =Force G140M and G230L SHIFTA2 into single-bar mode via SP_TRIM2.---
+WCPTAB   DESCRIP =TRIM values modified
+LAMPTAB  oref$l421050oo_lmp.fits
+LAMPTAB  PEDIGREE=GROUND
+LAMPTAB  DESCRIP =Ground+Inflight Cal PT lamp, 3.8 & 10 mA
+LAMPTAB  DESCRIP =Ground Cal for non-PRISM, PT lamp 10 mA
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+
+FLAGCR   PERFORM
+FLAGCR   COMPLETE
+         Shift in dispersion direction is 2.541 pixels.
+         Shift in spatial direction is -2.135 pixels.
+WAVECORR COMPLETE
+Imset 1  End 13:26:34 EST
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-4 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:34 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:26:34 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:26:34 EST
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:34 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:26:34 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:26:34 EST
+Imset 2  Begin 13:26:34 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 2  End 13:26:34 EST
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:34 EST
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx2.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:26:34 EST
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+Order 1  Begin 13:26:34 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+
+FLUXCORR PERFORM
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 14/04/1998
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+PHOTTAB  DESCRIP =Updated Sensitivities 2023
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/5/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+PCTAB    DESCRIP = 2 STIS observations averaged
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR COMPLETE
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:26:34 EST
+Imset 1  End 13:26:34 EST
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-6 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:34 EST
+
+INFO     'E1' has been appended to aperture
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx1.fits
+Rootname of0i03010
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+
+XTRACTAB oref$n7p1031qo_1dx.fits
+XTRACTAB PEDIGREE=INFLIGHT 18/05/97
+XTRACTAB DESCRIP =Analysis from prop. 7094
+XTRACTAB DESCRIP =Analysis from prop. 7094
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 02/09/1997 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+
+Imset 1  Begin 13:26:34 EST
+         Input read into memory.
+Order 1  Begin 13:26:34 EST
+X1DCORR  PERFORM
+BACKCORR PERFORM
+******** Calling Slfit ***********BACKCORR COMPLETE
+X1DCORR  COMPLETE
+         Spectrum extracted at y position = 894.442
+
+DISPCORR PERFORM
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+DISPCORR COMPLETE
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 16/03/2021
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+GACTAB   oref$p9r19203o_gac.fits
+GACTAB   PEDIGREE=INFLIGHT 22/04/2002 03/08/2004
+GACTAB   DESCRIP =X1D flux corr for grating/aper combos
+GACTAB   DESCRIP =Grating-Aperture Throughput Correction
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/05/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR PERFORM
+CTECORR  PERFORM
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+         GACTAB correction applied for G750L 52X0.2E1 7751
+CTECORR  COMPLETE
+FLUXCORR COMPLETE
+SGEOCORR OMIT
+
+         Row 1 written to disk.
+Order 1  End 13:26:34 EST
+
+         trace was rotated by = 0.0985248 degree.
+Imset 1  End 13:26:34 EST
+
+Warning  Keyword `XTRACALG' is being added to header.
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-6 complete ***
+
+End      17-Dec-2025 13:26:34 EST
+
+*** CALSTIS-0 complete ***
+
+*** CALSTIS-0 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:51 EST
+
+Input    of0i03010_raw.fits
+Outroot  output/of0i03010_raw.fits
+Wavecal  of0i03010_wav.fits
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:51 EST
+Input    of0i03010_raw.fits
+Output   output/of0i03010_blv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:51 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.31.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASFILE oref$84m1728io_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 25/03/2024
+BIASFILE DESCRIP =Refbias (1/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+Imset 1  End 13:26:51 EST
+
+Imset 2  Begin 13:26:51 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  PERFORM
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.4.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+Imset 2  End 13:26:51 EST
+
+End      17-Dec-2025 13:26:51 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-2 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:51 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_crj_tmp.fits
+
+CRCORR   PERFORM
+Total number of input image sets = 2
+CRREJTAB oref$j3m1403io_crr.fits
+CRCORR   COMPLETE
+
+End      17-Dec-2025 13:26:51 EST
+
+*** CALSTIS-2 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:51 EST
+Input    output/of0i03010_crj_tmp.fits
+Output   output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:51 EST
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:26:51 EST
+
+End      17-Dec-2025 13:26:51 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:51 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:51 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:26:51 EST
+
+Imset 2  Begin 13:26:51 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 2  End 13:26:52 EST
+
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:52 EST
+Input    of0i03010_wav.fits
+Output   output/of0i03010_fwv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:52 EST
+Epcfile  of0i03ozj_epc.fits
+Warning  EPCTAB `of0i03ozj_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1541.91.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASFILE oref$84m17296o_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 01/04/2024
+BIASFILE DESCRIP =Refbias (4/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:26:52 EST
+
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:52 EST
+Input    output/of0i03010_fwv_tmp.fits
+Output   output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:26:52 EST
+
+Order 1  Begin 13:26:52 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:26:52 EST
+Imset 1  End 13:26:52 EST
+
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-4 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:52 EST
+Input    output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:26:52 EST
+
+WAVECORR PERFORM
+WCPTAB   oref$16j1600co_wcp.fits
+WCPTAB   PEDIGREE=GROUND
+WCPTAB   DESCRIP =Force G140M and G230L SHIFTA2 into single-bar mode via SP_TRIM2.---
+WCPTAB   DESCRIP =TRIM values modified
+LAMPTAB  oref$l421050oo_lmp.fits
+LAMPTAB  PEDIGREE=GROUND
+LAMPTAB  DESCRIP =Ground+Inflight Cal PT lamp, 3.8 & 10 mA
+LAMPTAB  DESCRIP =Ground Cal for non-PRISM, PT lamp 10 mA
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+
+FLAGCR   PERFORM
+FLAGCR   COMPLETE
+         Shift in dispersion direction is 2.541 pixels.
+         Shift in spatial direction is -2.135 pixels.
+WAVECORR COMPLETE
+Imset 1  End 13:26:52 EST
+
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-4 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:52 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:26:52 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:26:52 EST
+
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:52 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:26:52 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:26:52 EST
+Imset 2  Begin 13:26:52 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 2  End 13:26:52 EST
+
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:52 EST
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx2.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:26:52 EST
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+Order 1  Begin 13:26:52 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+
+FLUXCORR PERFORM
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 14/04/1998
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+PHOTTAB  DESCRIP =Updated Sensitivities 2023
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/5/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+PCTAB    DESCRIP = 2 STIS observations averaged
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR COMPLETE
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:26:52 EST
+Imset 1  End 13:26:52 EST
+
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-6 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:26:52 EST
+
+INFO     'E1' has been appended to aperture
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx1.fits
+Rootname of0i03010
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+
+XTRACTAB oref$n7p1031qo_1dx.fits
+XTRACTAB PEDIGREE=INFLIGHT 18/05/97
+XTRACTAB DESCRIP =Analysis from prop. 7094
+XTRACTAB DESCRIP =Analysis from prop. 7094
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 02/09/1997 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+
+Imset 1  Begin 13:26:52 EST
+         Input read into memory.
+Order 1  Begin 13:26:52 EST
+X1DCORR  PERFORM
+BACKCORR PERFORM
+******** Calling Slfit ***********BACKCORR COMPLETE
+X1DCORR  COMPLETE
+         Spectrum extracted at y position = 894.442
+
+DISPCORR PERFORM
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+DISPCORR COMPLETE
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 16/03/2021
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+GACTAB   oref$p9r19203o_gac.fits
+GACTAB   PEDIGREE=INFLIGHT 22/04/2002 03/08/2004
+GACTAB   DESCRIP =X1D flux corr for grating/aper combos
+GACTAB   DESCRIP =Grating-Aperture Throughput Correction
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/05/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR PERFORM
+CTECORR  PERFORM
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+         GACTAB correction applied for G750L 52X0.2E1 7751
+CTECORR  COMPLETE
+FLUXCORR COMPLETE
+SGEOCORR OMIT
+
+         Row 1 written to disk.
+Order 1  End 13:26:52 EST
+
+         trace was rotated by = 0.0985248 degree.
+Imset 1  End 13:26:52 EST
+
+Warning  Keyword `XTRACALG' is being added to header.
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-6 complete ***
+
+End      17-Dec-2025 13:26:52 EST
+
+*** CALSTIS-0 complete ***
+
+*** CALSTIS-0 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:10 EST
+
+Input    of0i03010_raw.fits
+Outroot  output/of0i03010_raw.fits
+Wavecal  of0i03010_wav.fits
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:10 EST
+Input    of0i03010_raw.fits
+Output   output/of0i03010_blv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:10 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.31.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASFILE oref$84m1728io_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 25/03/2024
+BIASFILE DESCRIP =Refbias (1/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+Imset 1  End 13:27:10 EST
+
+Imset 2  Begin 13:27:10 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  PERFORM
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.4.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+Imset 2  End 13:27:10 EST
+
+End      17-Dec-2025 13:27:10 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-2 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:10 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_crj_tmp.fits
+
+CRCORR   PERFORM
+Total number of input image sets = 2
+CRREJTAB oref$j3m1403io_crr.fits
+CRCORR   COMPLETE
+
+End      17-Dec-2025 13:27:10 EST
+
+*** CALSTIS-2 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:10 EST
+Input    output/of0i03010_crj_tmp.fits
+Output   output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:10 EST
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:27:10 EST
+
+End      17-Dec-2025 13:27:10 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:10 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:10 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:27:11 EST
+
+Imset 2  Begin 13:27:11 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 2  End 13:27:11 EST
+
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:11 EST
+Input    of0i03010_wav.fits
+Output   output/of0i03010_fwv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:11 EST
+Epcfile  of0i03ozj_epc.fits
+Warning  EPCTAB `of0i03ozj_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1541.91.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASFILE oref$84m17296o_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 01/04/2024
+BIASFILE DESCRIP =Refbias (4/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:27:11 EST
+
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:11 EST
+Input    output/of0i03010_fwv_tmp.fits
+Output   output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:27:11 EST
+
+Order 1  Begin 13:27:11 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:27:11 EST
+Imset 1  End 13:27:11 EST
+
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-4 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:11 EST
+Input    output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:11 EST
+
+WAVECORR PERFORM
+WCPTAB   oref$16j1600co_wcp.fits
+WCPTAB   PEDIGREE=GROUND
+WCPTAB   DESCRIP =Force G140M and G230L SHIFTA2 into single-bar mode via SP_TRIM2.---
+WCPTAB   DESCRIP =TRIM values modified
+LAMPTAB  oref$l421050oo_lmp.fits
+LAMPTAB  PEDIGREE=GROUND
+LAMPTAB  DESCRIP =Ground+Inflight Cal PT lamp, 3.8 & 10 mA
+LAMPTAB  DESCRIP =Ground Cal for non-PRISM, PT lamp 10 mA
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+
+FLAGCR   PERFORM
+FLAGCR   COMPLETE
+         Shift in dispersion direction is 2.541 pixels.
+         Shift in spatial direction is -2.135 pixels.
+WAVECORR COMPLETE
+Imset 1  End 13:27:11 EST
+
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-4 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:11 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:27:11 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:27:11 EST
+
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:11 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:27:11 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:27:11 EST
+Imset 2  Begin 13:27:11 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 2  End 13:27:11 EST
+
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:11 EST
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx2.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:27:11 EST
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+Order 1  Begin 13:27:11 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+
+FLUXCORR PERFORM
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 14/04/1998
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+PHOTTAB  DESCRIP =Updated Sensitivities 2023
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/5/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+PCTAB    DESCRIP = 2 STIS observations averaged
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR COMPLETE
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:27:11 EST
+Imset 1  End 13:27:11 EST
+
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-6 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:11 EST
+
+INFO     'E1' has been appended to aperture
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx1.fits
+Rootname of0i03010
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+
+XTRACTAB oref$n7p1031qo_1dx.fits
+XTRACTAB PEDIGREE=INFLIGHT 18/05/97
+XTRACTAB DESCRIP =Analysis from prop. 7094
+XTRACTAB DESCRIP =Analysis from prop. 7094
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 02/09/1997 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+
+Imset 1  Begin 13:27:11 EST
+         Input read into memory.
+Order 1  Begin 13:27:11 EST
+X1DCORR  PERFORM
+BACKCORR PERFORM
+******** Calling Slfit ***********BACKCORR COMPLETE
+X1DCORR  COMPLETE
+         Spectrum extracted at y position = 894.442
+
+DISPCORR PERFORM
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+DISPCORR COMPLETE
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 16/03/2021
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+GACTAB   oref$p9r19203o_gac.fits
+GACTAB   PEDIGREE=INFLIGHT 22/04/2002 03/08/2004
+GACTAB   DESCRIP =X1D flux corr for grating/aper combos
+GACTAB   DESCRIP =Grating-Aperture Throughput Correction
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/05/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR PERFORM
+CTECORR  PERFORM
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+         GACTAB correction applied for G750L 52X0.2E1 7751
+CTECORR  COMPLETE
+FLUXCORR COMPLETE
+SGEOCORR OMIT
+
+         Row 1 written to disk.
+Order 1  End 13:27:11 EST
+
+         trace was rotated by = 0.0985248 degree.
+Imset 1  End 13:27:11 EST
+
+Warning  Keyword `XTRACALG' is being added to header.
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-6 complete ***
+
+End      17-Dec-2025 13:27:11 EST
+
+*** CALSTIS-0 complete ***
+
+*** CALSTIS-0 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:52 EST
+
+Input    of0i03010_raw.fits
+Outroot  output/of0i03010_raw.fits
+Wavecal  of0i03010_wav.fits
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:52 EST
+Input    of0i03010_raw.fits
+Output   output/of0i03010_blv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:52 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.31.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASFILE oref$84m1728io_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 25/03/2024
+BIASFILE DESCRIP =Refbias (1/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+Imset 1  End 13:27:52 EST
+
+Imset 2  Begin 13:27:52 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  PERFORM
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.4.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+Imset 2  End 13:27:52 EST
+
+End      17-Dec-2025 13:27:52 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-2 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:52 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_crj_tmp.fits
+
+CRCORR   PERFORM
+Total number of input image sets = 2
+CRREJTAB oref$j3m1403io_crr.fits
+CRCORR   COMPLETE
+
+End      17-Dec-2025 13:27:52 EST
+
+*** CALSTIS-2 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:52 EST
+Input    output/of0i03010_crj_tmp.fits
+Output   output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:52 EST
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:27:52 EST
+
+End      17-Dec-2025 13:27:52 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:52 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:52 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:27:52 EST
+
+Imset 2  Begin 13:27:52 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 2  End 13:27:52 EST
+
+End      17-Dec-2025 13:27:52 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:52 EST
+Input    of0i03010_wav.fits
+Output   output/of0i03010_fwv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:52 EST
+Epcfile  of0i03ozj_epc.fits
+Warning  EPCTAB `of0i03ozj_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1541.91.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASFILE oref$84m17296o_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 01/04/2024
+BIASFILE DESCRIP =Refbias (4/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:27:52 EST
+
+End      17-Dec-2025 13:27:52 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:52 EST
+Input    output/of0i03010_fwv_tmp.fits
+Output   output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:27:52 EST
+
+Order 1  Begin 13:27:52 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:27:52 EST
+Imset 1  End 13:27:52 EST
+
+End      17-Dec-2025 13:27:52 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-4 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:52 EST
+Input    output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:27:52 EST
+
+WAVECORR PERFORM
+WCPTAB   oref$16j1600co_wcp.fits
+WCPTAB   PEDIGREE=GROUND
+WCPTAB   DESCRIP =Force G140M and G230L SHIFTA2 into single-bar mode via SP_TRIM2.---
+WCPTAB   DESCRIP =TRIM values modified
+LAMPTAB  oref$l421050oo_lmp.fits
+LAMPTAB  PEDIGREE=GROUND
+LAMPTAB  DESCRIP =Ground+Inflight Cal PT lamp, 3.8 & 10 mA
+LAMPTAB  DESCRIP =Ground Cal for non-PRISM, PT lamp 10 mA
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+
+FLAGCR   PERFORM
+FLAGCR   COMPLETE
+         Shift in dispersion direction is 2.541 pixels.
+         Shift in spatial direction is -2.135 pixels.
+WAVECORR COMPLETE
+Imset 1  End 13:27:53 EST
+
+End      17-Dec-2025 13:27:53 EST
+
+*** CALSTIS-4 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:53 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:27:53 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:27:53 EST
+
+End      17-Dec-2025 13:27:53 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:53 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:27:53 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:27:53 EST
+Imset 2  Begin 13:27:53 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 2  End 13:27:53 EST
+
+End      17-Dec-2025 13:27:53 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:53 EST
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx2.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:27:53 EST
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+Order 1  Begin 13:27:53 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+
+FLUXCORR PERFORM
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 14/04/1998
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+PHOTTAB  DESCRIP =Updated Sensitivities 2023
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/5/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+PCTAB    DESCRIP = 2 STIS observations averaged
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR COMPLETE
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:27:53 EST
+Imset 1  End 13:27:53 EST
+
+End      17-Dec-2025 13:27:53 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-6 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:27:53 EST
+
+INFO     'E1' has been appended to aperture
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx1.fits
+Rootname of0i03010
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+
+XTRACTAB oref$n7p1031qo_1dx.fits
+XTRACTAB PEDIGREE=INFLIGHT 18/05/97
+XTRACTAB DESCRIP =Analysis from prop. 7094
+XTRACTAB DESCRIP =Analysis from prop. 7094
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 02/09/1997 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+
+Imset 1  Begin 13:27:53 EST
+         Input read into memory.
+Order 1  Begin 13:27:53 EST
+X1DCORR  PERFORM
+BACKCORR PERFORM
+******** Calling Slfit ***********BACKCORR COMPLETE
+X1DCORR  COMPLETE
+         Spectrum extracted at y position = 894.442
+
+DISPCORR PERFORM
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+DISPCORR COMPLETE
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 16/03/2021
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+GACTAB   oref$p9r19203o_gac.fits
+GACTAB   PEDIGREE=INFLIGHT 22/04/2002 03/08/2004
+GACTAB   DESCRIP =X1D flux corr for grating/aper combos
+GACTAB   DESCRIP =Grating-Aperture Throughput Correction
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/05/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR PERFORM
+CTECORR  PERFORM
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+         GACTAB correction applied for G750L 52X0.2E1 7751
+CTECORR  COMPLETE
+FLUXCORR COMPLETE
+SGEOCORR OMIT
+
+         Row 1 written to disk.
+Order 1  End 13:27:53 EST
+
+         trace was rotated by = 0.0985248 degree.
+Imset 1  End 13:27:53 EST
+
+Warning  Keyword `XTRACALG' is being added to header.
+End      17-Dec-2025 13:27:53 EST
+
+*** CALSTIS-6 complete ***
+
+End      17-Dec-2025 13:27:53 EST
+
+*** CALSTIS-0 complete ***
+
+*** CALSTIS-0 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:15 EST
+
+Input    of0i03010_raw.fits
+Outroot  output/of0i03010_raw.fits
+Wavecal  of0i03010_wav.fits
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:15 EST
+Input    of0i03010_raw.fits
+Output   output/of0i03010_blv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:15 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.31.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASFILE oref$84m1728io_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 25/03/2024
+BIASFILE DESCRIP =Refbias (1/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+Imset 1  End 13:28:15 EST
+
+Imset 2  Begin 13:28:15 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  PERFORM
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.4.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+Imset 2  End 13:28:15 EST
+
+End      17-Dec-2025 13:28:15 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-2 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:15 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_crj_tmp.fits
+
+CRCORR   PERFORM
+Total number of input image sets = 2
+CRREJTAB oref$j3m1403io_crr.fits
+CRCORR   COMPLETE
+
+End      17-Dec-2025 13:28:15 EST
+
+*** CALSTIS-2 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:15 EST
+Input    output/of0i03010_crj_tmp.fits
+Output   output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:15 EST
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:28:16 EST
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:16 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:16 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:28:16 EST
+
+Imset 2  Begin 13:28:16 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 2  End 13:28:16 EST
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:16 EST
+Input    of0i03010_wav.fits
+Output   output/of0i03010_fwv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:16 EST
+Epcfile  of0i03ozj_epc.fits
+Warning  EPCTAB `of0i03ozj_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1541.91.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASFILE oref$84m17296o_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 01/04/2024
+BIASFILE DESCRIP =Refbias (4/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:28:16 EST
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:16 EST
+Input    output/of0i03010_fwv_tmp.fits
+Output   output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:28:16 EST
+
+Order 1  Begin 13:28:16 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:28:16 EST
+Imset 1  End 13:28:16 EST
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-4 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:16 EST
+Input    output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:16 EST
+
+WAVECORR PERFORM
+WCPTAB   oref$16j1600co_wcp.fits
+WCPTAB   PEDIGREE=GROUND
+WCPTAB   DESCRIP =Force G140M and G230L SHIFTA2 into single-bar mode via SP_TRIM2.---
+WCPTAB   DESCRIP =TRIM values modified
+LAMPTAB  oref$l421050oo_lmp.fits
+LAMPTAB  PEDIGREE=GROUND
+LAMPTAB  DESCRIP =Ground+Inflight Cal PT lamp, 3.8 & 10 mA
+LAMPTAB  DESCRIP =Ground Cal for non-PRISM, PT lamp 10 mA
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+
+FLAGCR   PERFORM
+FLAGCR   COMPLETE
+         Shift in dispersion direction is 2.541 pixels.
+         Shift in spatial direction is -2.135 pixels.
+WAVECORR COMPLETE
+Imset 1  End 13:28:16 EST
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-4 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:16 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:28:16 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:28:16 EST
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:16 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:28:16 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:28:16 EST
+Imset 2  Begin 13:28:16 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 2  End 13:28:16 EST
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:16 EST
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx2.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:28:16 EST
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+Order 1  Begin 13:28:16 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+
+FLUXCORR PERFORM
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 14/04/1998
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+PHOTTAB  DESCRIP =Updated Sensitivities 2023
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/5/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+PCTAB    DESCRIP = 2 STIS observations averaged
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR COMPLETE
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:28:16 EST
+Imset 1  End 13:28:16 EST
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-6 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:16 EST
+
+INFO     'E1' has been appended to aperture
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx1.fits
+Rootname of0i03010
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+
+XTRACTAB oref$n7p1031qo_1dx.fits
+XTRACTAB PEDIGREE=INFLIGHT 18/05/97
+XTRACTAB DESCRIP =Analysis from prop. 7094
+XTRACTAB DESCRIP =Analysis from prop. 7094
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 02/09/1997 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+
+Imset 1  Begin 13:28:16 EST
+         Input read into memory.
+Order 1  Begin 13:28:16 EST
+X1DCORR  PERFORM
+BACKCORR PERFORM
+******** Calling Slfit ***********BACKCORR COMPLETE
+X1DCORR  COMPLETE
+         Spectrum extracted at y position = 894.442
+
+DISPCORR PERFORM
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+DISPCORR COMPLETE
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 16/03/2021
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+GACTAB   oref$p9r19203o_gac.fits
+GACTAB   PEDIGREE=INFLIGHT 22/04/2002 03/08/2004
+GACTAB   DESCRIP =X1D flux corr for grating/aper combos
+GACTAB   DESCRIP =Grating-Aperture Throughput Correction
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/05/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR PERFORM
+CTECORR  PERFORM
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+         GACTAB correction applied for G750L 52X0.2E1 7751
+CTECORR  COMPLETE
+FLUXCORR COMPLETE
+SGEOCORR OMIT
+
+         Row 1 written to disk.
+Order 1  End 13:28:16 EST
+
+         trace was rotated by = 0.0985248 degree.
+Imset 1  End 13:28:16 EST
+
+Warning  Keyword `XTRACALG' is being added to header.
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-6 complete ***
+
+End      17-Dec-2025 13:28:16 EST
+
+*** CALSTIS-0 complete ***
+
+*** CALSTIS-0 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:46 EST
+
+Input    of0i03010_raw.fits
+Outroot  output/of0i03010_raw.fits
+Wavecal  of0i03010_wav.fits
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:46 EST
+Input    of0i03010_raw.fits
+Output   output/of0i03010_blv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:46 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.31.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASFILE oref$84m1728io_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 25/03/2024
+BIASFILE DESCRIP =Refbias (1/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+Imset 1  End 13:28:46 EST
+
+Imset 2  Begin 13:28:46 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  PERFORM
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.4.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+Imset 2  End 13:28:46 EST
+
+End      17-Dec-2025 13:28:46 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-2 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:46 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_crj_tmp.fits
+
+CRCORR   PERFORM
+Total number of input image sets = 2
+CRREJTAB oref$j3m1403io_crr.fits
+CRCORR   COMPLETE
+
+End      17-Dec-2025 13:28:46 EST
+
+*** CALSTIS-2 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:46 EST
+Input    output/of0i03010_crj_tmp.fits
+Output   output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:46 EST
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:28:46 EST
+
+End      17-Dec-2025 13:28:46 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:46 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:46 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:28:46 EST
+
+Imset 2  Begin 13:28:46 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 2  End 13:28:46 EST
+
+End      17-Dec-2025 13:28:46 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:46 EST
+Input    of0i03010_wav.fits
+Output   output/of0i03010_fwv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:46 EST
+Epcfile  of0i03ozj_epc.fits
+Warning  EPCTAB `of0i03ozj_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1541.91.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASFILE oref$84m17296o_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 01/04/2024
+BIASFILE DESCRIP =Refbias (4/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:28:47 EST
+
+End      17-Dec-2025 13:28:47 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:47 EST
+Input    output/of0i03010_fwv_tmp.fits
+Output   output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:28:47 EST
+
+Order 1  Begin 13:28:47 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:28:47 EST
+Imset 1  End 13:28:47 EST
+
+End      17-Dec-2025 13:28:47 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-4 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:47 EST
+Input    output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:28:47 EST
+
+WAVECORR PERFORM
+WCPTAB   oref$16j1600co_wcp.fits
+WCPTAB   PEDIGREE=GROUND
+WCPTAB   DESCRIP =Force G140M and G230L SHIFTA2 into single-bar mode via SP_TRIM2.---
+WCPTAB   DESCRIP =TRIM values modified
+LAMPTAB  oref$l421050oo_lmp.fits
+LAMPTAB  PEDIGREE=GROUND
+LAMPTAB  DESCRIP =Ground+Inflight Cal PT lamp, 3.8 & 10 mA
+LAMPTAB  DESCRIP =Ground Cal for non-PRISM, PT lamp 10 mA
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+
+FLAGCR   PERFORM
+FLAGCR   COMPLETE
+         Shift in dispersion direction is 2.541 pixels.
+         Shift in spatial direction is -2.135 pixels.
+WAVECORR COMPLETE
+Imset 1  End 13:28:47 EST
+
+End      17-Dec-2025 13:28:47 EST
+
+*** CALSTIS-4 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:47 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:28:47 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:28:47 EST
+
+End      17-Dec-2025 13:28:47 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:47 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:28:47 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:28:47 EST
+Imset 2  Begin 13:28:47 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 2  End 13:28:47 EST
+
+End      17-Dec-2025 13:28:47 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:47 EST
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx2.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:28:47 EST
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+Order 1  Begin 13:28:47 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+
+FLUXCORR PERFORM
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 14/04/1998
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+PHOTTAB  DESCRIP =Updated Sensitivities 2023
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/5/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+PCTAB    DESCRIP = 2 STIS observations averaged
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR COMPLETE
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:28:47 EST
+Imset 1  End 13:28:47 EST
+
+End      17-Dec-2025 13:28:47 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-6 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:28:47 EST
+
+INFO     'E1' has been appended to aperture
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx1.fits
+Rootname of0i03010
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+
+XTRACTAB oref$n7p1031qo_1dx.fits
+XTRACTAB PEDIGREE=INFLIGHT 18/05/97
+XTRACTAB DESCRIP =Analysis from prop. 7094
+XTRACTAB DESCRIP =Analysis from prop. 7094
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 02/09/1997 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+
+Imset 1  Begin 13:28:47 EST
+         Input read into memory.
+Order 1  Begin 13:28:47 EST
+X1DCORR  PERFORM
+BACKCORR PERFORM
+******** Calling Slfit ***********BACKCORR COMPLETE
+X1DCORR  COMPLETE
+         Spectrum extracted at y position = 894.442
+
+DISPCORR PERFORM
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+DISPCORR COMPLETE
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 16/03/2021
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+GACTAB   oref$p9r19203o_gac.fits
+GACTAB   PEDIGREE=INFLIGHT 22/04/2002 03/08/2004
+GACTAB   DESCRIP =X1D flux corr for grating/aper combos
+GACTAB   DESCRIP =Grating-Aperture Throughput Correction
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/05/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR PERFORM
+CTECORR  PERFORM
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+         GACTAB correction applied for G750L 52X0.2E1 7751
+CTECORR  COMPLETE
+FLUXCORR COMPLETE
+SGEOCORR OMIT
+
+         Row 1 written to disk.
+Order 1  End 13:28:47 EST
+
+         trace was rotated by = 0.0985248 degree.
+Imset 1  End 13:28:47 EST
+
+Warning  Keyword `XTRACALG' is being added to header.
+End      17-Dec-2025 13:28:47 EST
+
+*** CALSTIS-6 complete ***
+
+End      17-Dec-2025 13:28:47 EST
+
+*** CALSTIS-0 complete ***
+
+*** CALSTIS-0 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:59 EST
+
+Input    of0i03010_raw.fits
+Outroot  output/of0i03010_raw.fits
+Wavecal  of0i03010_wav.fits
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:59 EST
+Input    of0i03010_raw.fits
+Output   output/of0i03010_blv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:29:59 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.31.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASFILE oref$84m1728io_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 25/03/2024
+BIASFILE DESCRIP =Refbias (1/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+Imset 1  End 13:29:59 EST
+
+Imset 2  Begin 13:29:59 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  PERFORM
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1477.4.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=6.24, gain=1
+
+BIASCORR PERFORM
+BIASCORR COMPLETE
+
+DARKCORR OMIT
+
+FLATCORR OMIT
+
+SHADCORR OMIT
+Imset 2  End 13:29:59 EST
+
+End      17-Dec-2025 13:29:59 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-2 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:59 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_crj_tmp.fits
+
+CRCORR   PERFORM
+Total number of input image sets = 2
+CRREJTAB oref$j3m1403io_crr.fits
+CRCORR   COMPLETE
+
+End      17-Dec-2025 13:29:59 EST
+
+*** CALSTIS-2 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:59 EST
+Input    output/of0i03010_crj_tmp.fits
+Output   output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:29:59 EST
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:29:59 EST
+
+End      17-Dec-2025 13:29:59 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:29:59 EST
+Input    output/of0i03010_blv_tmp.fits
+Output   output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:29:59 EST
+Epcfile  of0i03p0j_epc.fits
+Warning  EPCTAB `of0i03p0j_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:29:59 EST
+
+Imset 2  Begin 13:29:59 EST
+Epcfile  of0i03p1j_epc.fits
+Warning  EPCTAB `of0i03p1j_epc.fits' not found.
+
+DQICORR  OMIT
+
+ATODCORR OMIT
+
+BLEVCORR OMIT
+
+BIASCORR OMIT
+
+DARKCORR PERFORM
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 2  End 13:30:00 EST
+
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-1 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:30:00 EST
+Input    of0i03010_wav.fits
+Output   output/of0i03010_fwv_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:30:00 EST
+Epcfile  of0i03ozj_epc.fits
+Warning  EPCTAB `of0i03ozj_epc.fits' not found.
+
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=GROUND
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Oct. 1996 Air Calibration
+
+DQICORR  PERFORM
+DQITAB   oref$h1v11475o_bpx.fits
+DQITAB   PEDIGREE=GROUND
+DQITAB   DESCRIP =Prel. Ground Calib
+DQICORR  COMPLETE
+
+ATODCORR OMIT
+
+BLEVCORR PERFORM
+         Bias level from overscan has been subtracted; \
+         mean of bias levels subtracted was 1541.91.
+BLEVCORR COMPLETE
+         Uncertainty array initialized, readnoise=8.2328, gain=4.016
+
+BIASCORR PERFORM
+BIASFILE oref$84m17296o_bia.fits
+BIASFILE PEDIGREE=INFLIGHT 19/03/2024 01/04/2024
+BIASFILE DESCRIP =Refbias (4/D) for data taken after 2024-03-19----------------------
+BIASCORR COMPLETE
+
+DARKCORR PERFORM
+DARKFILE oref$84m1728so_drk.fits
+DARKFILE PEDIGREE=INFLIGHT 19/03/2024 17/04/2024
+DARKFILE DESCRIP =Weekdark (amp=D) for data taken after 2024-03-19-------------------
+DARKCORR COMPLETE
+
+FLATCORR PERFORM
+PFLTFILE oref$x6417096o_pfl.fits
+PFLTFILE PEDIGREE=INFLIGHT 24/10/2011 24/06/2012
+PFLTFILE DESCRIP =REVISED ON-ORBIT STIS SPECTROSCOPIC CCD P-FLAT FOR L-MODES---------
+LFLTFILE oref$pcc2026ko_lfl.fits
+LFLTFILE PEDIGREE=INFLIGHT 27/05/1997 27/05/1997
+LFLTFILE DESCRIP =CCD G750L Low-Order Flat
+FLATCORR COMPLETE
+
+SHADCORR OMIT
+
+PHOTCORR OMIT
+
+STATFLAG PERFORM
+STATFLAG COMPLETE
+Imset 1  End 13:30:00 EST
+
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-1 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:30:00 EST
+Input    output/of0i03010_fwv_tmp.fits
+Output   output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:30:00 EST
+
+Order 1  Begin 13:30:00 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:30:00 EST
+Imset 1  End 13:30:00 EST
+
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-4 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:30:00 EST
+Input    output/of0i03010_w2d_tmp.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+
+Imset 1  Begin 13:30:00 EST
+
+WAVECORR PERFORM
+WCPTAB   oref$16j1600co_wcp.fits
+WCPTAB   PEDIGREE=GROUND
+WCPTAB   DESCRIP =Force G140M and G230L SHIFTA2 into single-bar mode via SP_TRIM2.---
+WCPTAB   DESCRIP =TRIM values modified
+LAMPTAB  oref$l421050oo_lmp.fits
+LAMPTAB  PEDIGREE=GROUND
+LAMPTAB  DESCRIP =Ground+Inflight Cal PT lamp, 3.8 & 10 mA
+LAMPTAB  DESCRIP =Ground Cal for non-PRISM, PT lamp 10 mA
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Microscope Meas./Hartig Post-launch Offsets
+
+FLAGCR   PERFORM
+FLAGCR   COMPLETE
+         Shift in dispersion direction is 2.541 pixels.
+         Shift in spatial direction is -2.135 pixels.
+WAVECORR COMPLETE
+Imset 1  End 13:30:00 EST
+
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-4 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:30:00 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_crj.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:30:00 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:30:00 EST
+
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-12 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:30:00 EST
+Wavecal  output/of0i03010_w2d_tmp.fits
+Science  output/of0i03010_flt.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:30:00 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 1  End 13:30:00 EST
+Imset 2  Begin 13:30:00 EST
+         SHIFTA1 set to 2.54139
+         SHIFTA2 set to -2.13532
+Imset 2  End 13:30:00 EST
+
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-12 complete ***
+
+*** CALSTIS-7 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:30:00 EST
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx2.fits
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+Imset 1  Begin 13:30:00 EST
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+Order 1  Begin 13:30:00 EST
+
+X2DCORR  PERFORM
+DISPCORR PERFORM
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+SDCTAB   oref$16j16006o_sdc.fits
+SDCTAB   PEDIGREE=INFLIGHT 27/05/1997 13/06/2017
+SDCTAB   DESCRIP =Co-aligned fiducial bars via an update to the CDELT2 plate scales.-
+SDCTAB   DESCRIP =CDELT2 updated with inflight data, others Lindler/prelaunch
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB PEDIGREE=GROUND
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+INANGTAB DESCRIP =Model/C. Bowers
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+SPTRCTAB DESCRIP =Lindler/Bohlin/Dressel/Holfeltz postlaunch calibration
+
+FLUXCORR PERFORM
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 14/04/1998
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+PHOTTAB  DESCRIP =Updated Sensitivities 2023
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/5/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+PCTAB    DESCRIP = 2 STIS observations averaged
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR COMPLETE
+X2DCORR  COMPLETE
+DISPCORR COMPLETE
+Order 1  End 13:30:00 EST
+Imset 1  End 13:30:00 EST
+
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-7 complete ***
+
+*** CALSTIS-6 -- Version 3.4.2 (19-Jan-2018) ***
+Begin    17-Dec-2025 13:30:00 EST
+
+INFO     'E1' has been appended to aperture
+Input    output/of0i03010_crj.fits
+Output   output/of0i03010_sx1.fits
+Rootname of0i03010
+OBSMODE  ACCUM
+APERTURE 52X0.2E1
+OPT_ELEM G750L
+DETECTOR CCD
+
+XTRACTAB oref$n7p1031qo_1dx.fits
+XTRACTAB PEDIGREE=INFLIGHT 18/05/97
+XTRACTAB DESCRIP =Analysis from prop. 7094
+XTRACTAB DESCRIP =Analysis from prop. 7094
+SPTRCTAB oref$qa31608go_1dt.fits
+SPTRCTAB PEDIGREE=INFLIGHT 02/09/1997 13/02/1998
+SPTRCTAB DESCRIP =New traces to account for angle change with time
+
+Imset 1  Begin 13:30:00 EST
+         Input read into memory.
+Order 1  Begin 13:30:00 EST
+X1DCORR  PERFORM
+BACKCORR PERFORM
+******** Calling Slfit ***********BACKCORR COMPLETE
+X1DCORR  COMPLETE
+         Spectrum extracted at y position = 894.442
+
+DISPCORR PERFORM
+DISPTAB  oref$l2j0137to_dsp.fits
+DISPTAB  PEDIGREE=INFLIGHT 27/02/1997 24/11/1999
+DISPTAB  DESCRIP =Lindler, May 2000
+DISPTAB  DESCRIP =Lindler Postlaunch, May 2000
+APDESTAB oref$16j16005o_apd.fits
+APDESTAB PEDIGREE=INFLIGHT 01/03/1997 13/06/2017
+APDESTAB DESCRIP =Aligned long-slit bar positions for single-bar cases.--------------
+APDESTAB DESCRIP =Offset relative to row 900
+INANGTAB oref$h5s11397o_iac.fits
+INANGTAB DESCRIP =Model/C. Bowers May 6, 1997
+DISPCORR COMPLETE
+
+HELCORR  PERFORM
+HELCORR  COMPLETE
+
+PHOTTAB  oref$95118575o_pht.fits
+PHOTTAB  PEDIGREE=INFLIGHT 27/02/1997 16/03/2021
+PHOTTAB  DESCRIP =Fullerton 2025 calibration
+APERTAB  oref$y2r1559to_apt.fits
+APERTAB  PEDIGREE=MODEL
+APERTAB  DESCRIP =Added/updated values for 31X0.05NDA,31X0.05NDB,31X0.05NDC apertures
+APERTAB  DESCRIP =Bohlin/Hartig TIM Models Nov. 1998
+GACTAB   oref$p9r19203o_gac.fits
+GACTAB   PEDIGREE=INFLIGHT 22/04/2002 03/08/2004
+GACTAB   DESCRIP =X1D flux corr for grating/aper combos
+GACTAB   DESCRIP =Grating-Aperture Throughput Correction
+PCTAB    oref$q541740po_pct.fits
+PCTAB    PEDIGREE=INFLIGHT 18/05/1997 19/12/1998
+PCTAB    DESCRIP =Sensitivity for diff. extractions heights
+TDSTAB   oref$8712049eo_tds.fits
+TDSTAB   PEDIGREE=INFLIGHT 01/04/1997 06/03/2024
+TDSTAB   DESCRIP =Updated time sensitivities for MIRVIS, G230LB, and G230MB
+FLUXCORR PERFORM
+CTECORR  PERFORM
+CCDTAB   oref$16j1600do_ccd.fits
+CCDTAB   PEDIGREE=INFLIGHT 01/05/2009 01/05/2009
+CCDTAB   DESCRIP =Updated amp=D gain=4 atodgain and corresponding readnoise values---
+CCDTAB   DESCRIP =Proposal 8057, by I. Dashevsky & P. Goudfrooij
+         GACTAB correction applied for G750L 52X0.2E1 7751
+CTECORR  COMPLETE
+FLUXCORR COMPLETE
+SGEOCORR OMIT
+
+         Row 1 written to disk.
+Order 1  End 13:30:00 EST
+
+         trace was rotated by = 0.0985248 degree.
+Imset 1  End 13:30:00 EST
+
+Warning  Keyword `XTRACALG' is being added to header.
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-6 complete ***
+
+End      17-Dec-2025 13:30:00 EST
+
+*** CALSTIS-0 complete ***
