@@ -14,13 +14,13 @@ from astropy.nddata import Cutout2D
 from astropy.wcs import WCS, FITSFixedWarning
 from astropy.utils.exceptions import AstropyWarning
 
-from coronspec_tools import utils as ctutils
-from coronspec_tools import find_star as ctfs
+from gross import utils as gross_utils
+from gross import find_star as find_star
 
 # the WCS throws an warning when loading this data that we can ignore
 warnings.filterwarnings("ignore", category=FITSFixedWarning)
 
-class Observation:
+class ObsSeq:
 
     def __init__(
             self,
@@ -74,7 +74,7 @@ class Observation:
         self.process_occulted(occ_file)
 
         # process data
-        self.occ_row, self.occ_bar = ctfs.find_star_from_wcs(
+        self.occ_row, self.occ_bar = find_star.find_star_from_wcs(
             sx1_file, unocc_file, occ_file,
         )
         # if str(occ_file)[:-5].split("_")[-1] == 'sx2':
@@ -86,10 +86,10 @@ class Observation:
         # data cleaning
         if median_clean > 0:
             specunit = self.primary_spectrum.unit
-            self.primary_spectrum = ctutils.rolling_median(
+            self.primary_spectrum = gross_utils.rolling_median(
                 self.primary_spectrum.value, median_clean
             ) * specunit
-            self.primary_spectrum_unc = ctutils.rolling_median(
+            self.primary_spectrum_unc = gross_utils.rolling_median(
                 self.primary_spectrum_unc.value, median_clean
             ) * specunit
             self.occ_stamp.data = self.clean_stamp(self.occ_stamp.data, median_clean)
@@ -195,7 +195,7 @@ class Observation:
             # if filetype == 'sx2': # crop the sx2 exposures
             #     self.unocc_img = crop_sx2(self.unocc_img, self.wlsol.size)
             #     self.unocc_unc = crop_sx2(self.unocc_unc, self.wlsol.size)
-            self.offset, self.unocc_row = ctfs.find_unocc_pos(hdulist, self.wlsol)
+            self.offset, self.unocc_row = find_star.find_unocc_pos(hdulist, self.wlsol)
             # if filetype == 'sx2':
             #     self.unocc_row -= 88.5
             #     print(self.unocc_row)
@@ -225,9 +225,9 @@ class Observation:
         # avg, std = stats.sigma_clipped_stats(self.occ_stamp.data)
         # thresh = avg + std_thresh*std
         """Apply filtering to a 2-D spectral image"""
-        filtimg = ctutils.median_filter_image(img, width)
+        filtimg = gross_utils.median_filter_image(img, width)
         # filtimg = np.array([
-        #     ctutils.savgol_filter(row, width=width, order=3)
+        #     gross_utils.savgol_filter(row, width=width, order=3)
         # ])
         return filtimg
         

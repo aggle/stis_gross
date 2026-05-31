@@ -7,7 +7,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 
-from coronspec_tools import (
+from gross import (
     observing_sequence,
     sdi_tools,
     retrieval_tools

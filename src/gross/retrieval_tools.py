@@ -13,9 +13,9 @@ from astropy.nddata import Cutout2D
 from astropy.wcs import WCS
 from astropy.modeling.models import Gaussian1D
 
-from coronspec_tools import utils as ctutils
-from coronspec_tools import observing_sequence
-from coronspec_tools import sdi_tools
+from gross import utils as gross_utils
+from gross import observing_sequence
+from gross import sdi_tools
 
 class Retriever:
     def __init__(self, sdi:sdi_tools.SDI):

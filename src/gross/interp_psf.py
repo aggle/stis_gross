@@ -8,7 +8,7 @@ from scipy import interpolate
 
 from astropy import units
 
-from coronspec_tools.observing_sequence import Observation
+from gross.observing_sequence import ObsSeq
 
 
 def interpolate_column(

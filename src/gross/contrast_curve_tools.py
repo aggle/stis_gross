@@ -19,12 +19,12 @@ import pandas as pd
 from astropy import units
 from astropy.wcs import WCS
 
-from coronspec_tools import (
+from gross import (
     observing_sequence,
     sdi_tools,
     retrieval_tools, 
-    utils as ctutils,
-    misc as ctmisc,
+    utils as gross_utils,
+    misc as gross_misc,
 )
 
 def sep2row(sep, obs):
@@ -108,9 +108,9 @@ def curve_wrapper(
 
     output_folder = pathlib.Path(output_folder)
 
-    POSTARG = ctmisc.fits.getval(occ_file, 'POSTARG2', 0) * units.arcsec
+    POSTARG = gross_misc.fits.getval(occ_file, 'POSTARG2', 0) * units.arcsec
     
-    obs = observing_sequence.Observation(
+    obs = observing_sequence.ObsSeq(
         sx1_file=sx1_file,
         unocc_file=unocc_file,
         occ_file=occ_file,

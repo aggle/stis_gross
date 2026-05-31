@@ -1,6 +1,6 @@
 G.R.O.S.S.: Great Resources for Occulted STIS Spectroscopy
 =====================================
-or, Get Rid Of STIS Spectroscopic Starlight
+or, Get Rid Of STIS Spectroscopic SpeckleS
 
 Tools for preparing STIS Coronagraphic Spectroscopy
 
@@ -61,7 +61,7 @@ Data preparation involves:
     - `occ_img`: 2-D spectral image of the occulted observation
     - `occ_row`: 0-indexed row coordinate corresponding to the offset in the occulted exposure, aka where the star is
 
-- `coronspec_tools::find_star::find_star_from_wcs()`
+- `gross::find_star::find_star_from_wcs()`
   - three arguments:
     - extracted 1-D spectrum
     - 2-D unocculted spectral image

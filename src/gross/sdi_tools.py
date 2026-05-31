@@ -7,15 +7,15 @@ import pandas as pd
 from astropy import units
 from astropy.wcs import WCS
 
-from coronspec_tools import (
+from gross import (
     observing_sequence,
-    utils as ctutils,
+    utils as gross_utils,
 )
 
 class SDI:
     def __init__(
             self,
-            obs: observing_sequence.Observation,
+            obs: observing_sequence.ObsSeq,
             ref_wl_ind = -1,
             psf_halfwidth=5,
             stamp_to_subtract : np.ndarray | None = None
@@ -26,8 +26,8 @@ class SDI:
 
         Parameters
         ----------
-        obs: observing_sequence.Observation
-          an Observation instance
+        obs: observing_sequence.ObsSeq
+          an ObsSeq instance
         ref_wl_ind = -1,
           This wavelength index will be used as the anchor for scaling
         psf_halfwidth=5
@@ -204,8 +204,8 @@ class SDI:
         # model the row
         # apply a Savitzky-Golay filter to the row
         savgol_params = dict(window_length=100, polyorder=2)
-        scaled_row = ctutils.savgol_filter(self.scaled_stamp[scaled_row_ind], **savgol_params)
-        scaled_unc = ctutils.savgol_filter(self.scaled_stamp_unc[scaled_row_ind], **savgol_params)
+        scaled_row = gross_utils.savgol_filter(self.scaled_stamp[scaled_row_ind], **savgol_params)
+        scaled_unc = gross_utils.savgol_filter(self.scaled_stamp_unc[scaled_row_ind], **savgol_params)
 
         masked_row = np.ma.masked_array(scaled_row, mask)
         masked_unc = np.ma.masked_array(scaled_unc, mask=mask)
@@ -680,7 +680,7 @@ def descale_signal(
 
 def construct_psf_model(
     scaled_img : np.ndarray,
-    obs : observing_sequence.Observation,
+    obs : observing_sequence.ObsSeq,
     y_test : int,
     y_ref : float,
     wl_ref_ind : int,
@@ -694,8 +694,8 @@ def construct_psf_model(
     ----------
     scaled_img : np.ndarray
       the wavelength-scaled image
-    obs : observing_sequence.Observation
-      the Observation object carrying the observation-related information
+    obs : observing_sequence.ObsSeq
+      the ObsSeq object carrying the observation-related information
     y_test : float
       the position of a hypothetical source, in pixels, along the spatial axis of the provided image
     y_ref : float
@@ -741,7 +741,7 @@ def construct_psf_model(
 
 # def model_and_subtract_target(
 #     scaled_img : np.ndarray,
-#     obs : observing_sequence.Observation,
+#     obs : observing_sequence.ObsSeq,
 #     y_test : int,
 #     y_ref : float,
 #     wl_ref_ind : int,
@@ -755,8 +755,8 @@ def construct_psf_model(
 #     ----------
 #     scaled_img : np.ndarray
 #       the wavelength-scaled image
-#     obs : observing_sequence.Observation
-#       the Observation object carrying the observation-related information
+#     obs : observing_sequence.ObsSeq
+#       the ObsSeq object carrying the observation-related information
 #     y_test : float
 #       the position of a hypothetical source, in pixels, along the spatial axis of the provided image
 #     y_ref : float

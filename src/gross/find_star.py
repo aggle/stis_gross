@@ -16,7 +16,7 @@ from astropy.wcs import WCS
 from scipy import interpolate
 from scipy import optimize
 
-from coronspec_tools import utils as ctutils
+from gross import utils as gross_utils
 
 
 def interp_col(col):
