@@ -1,4 +1,4 @@
-G.R.O.S.S.: Great Resources for Occulted STIS Spectroscopy
+G.R.O.S.S.: Great Resource for Occulted STIS Spectroscopy
 =====================================
 or, Get Rid Of Spectroscopic SpeckleS
 
