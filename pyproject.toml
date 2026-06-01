@@ -1,6 +1,6 @@
 [project]
 name = "stis_gross"
-description = "Get Rid Of Spectroscopic speckleS (in STIS coronagraphic spectroscopy)"
+description = "Great Resource for Occulted STIS Spectroscopy / Get Rid Of Spectroscopic Speckles"
 readme = "README.md"
 authors = [
   { name = "Jonathan Aguilar", email = "jaguilar@stsci.edu" },
