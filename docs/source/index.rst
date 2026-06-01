@@ -6,7 +6,9 @@
 G.R.O.S.S. documentation
 ========================
 
-**G.R.O.S.S.** - Great Resource for Occulted STIS Spectroscopy, or, Get Rid Of Spectroscopic SpeckleS, is a set of tools designed to be used with the STIS long-slit spectrographs fiducial bar occulters (<https://hst-docs.stsci.edu/stisihb/chapter-12-special-uses-of-stis/12-10-coronagraphic-spectroscopy>).
+**G.R.O.S.S.** is a Great Resource for Occulted STIS Spectroscopy that will help you Get Rid Of Spectroscopic SpeckleS!
+
+GROSS is a set of tools designed to be used with the STIS long-slit spectrographs fiducial bar occulters (<https://hst-docs.stsci.edu/stisihb/chapter-12-special-uses-of-stis/12-10-coronagraphic-spectroscopy>).
 
 .. note::
    This project is under active development.

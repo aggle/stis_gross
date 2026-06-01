@@ -7,7 +7,7 @@
 # add these directories to sys.path here.
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'src'))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -26,6 +26,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
 ]
+autsummary_generate = True
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -35,5 +36,5 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'alabaster' # 'furo' #
 html_static_path = ['_static']
